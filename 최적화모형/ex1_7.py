@@ -45,8 +45,7 @@ obj_expr = []
 for i in range(len(beam)) :
     for j in range(len(machine)) :
         obj_expr.append(cost[j]*data[i,j])
-        
-solver.Minimize(solver.Sum(obj_expr))
+        solver.Minimize(solver.Sum(obj_expr))
 
 status = solver.Solve()
 
